@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <!-- <link rel="stylesheet" href="/css/signupstyle.css"> -->
+    <script src="/js/signup.js" defer></script>
+
+</head>
+<body>
+    <form onsubmit="signup(event)">
+        <h1>Sign Up</h1>
+        <label for="profilepicture">Profilepicture: </label>
+        <input type="file" name="profilepicture" id="profilepicture" ><br><br>
+        <div id="profilepicturepreview"></div>
+        <label for="username">Username: </label>
+        <input type="text" name="username" id="username" placeholder="Username" required>
+        <br>
+        <label for="email">Email: </label>
+        <input type="text" name="email" id="email" placeholder="Email" required>
+        <br>
+        <label for="phone">Phone: </label>
+        <input type="text" name="phone" id="phone" placeholder="Phone" required>
+        <br>
+        <label for="password">Password: </label>
+        <input type="text" name="password" id="password" placeholder="Password" required>
+        <br>
+        <label for="confirmpassword">Confirm Password: </label>
+        <input type="text" name="confirmpassword" id="confirmpassword" placeholder="Confirm Password" required>
+        <br>
+        <input type="submit" value="SUBMIT">
+    </form>
+    <div class="login">
+        <p>Have an account? <a href="/login">Login</a></p>
+    </div>
+</body>
+</html>
