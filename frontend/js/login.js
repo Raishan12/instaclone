@@ -1,4 +1,4 @@
-console.log("this is signin");
+console.log("this is login");
 
 async function signin(event){
     event.preventDefault()

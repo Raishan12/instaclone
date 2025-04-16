@@ -19,6 +19,8 @@ export const signup = async (req, res) => {
 
 
 export const login = async (req, res) => {
+    console.log("login function");
+    
     const { email, password} = req.body
     try {
         const userExist = await userSchema.findOne({ email })

@@ -3,6 +3,10 @@ import connection from "./connection.js"
 import path from "path"
 import url from "url"
 import userRoutes from "./routes/insta_route.js"
+import env from "dotenv"
+import auth from "./middleware/auth.js"
+
+env.config()
 
 const port = 7000
 const app = express()
@@ -11,12 +15,9 @@ const __filename = url.fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 const frontend = path.join(__dirname, "..", "frontend")
 
-app.use(express.static(frontend))
-app.use(express.json({limit:"15mb"}))
-
-
 app.use("/api/insta", userRoutes)
 
+app.use(express.json({limit:"15mb"}))
 
 app.get("/signup", (req, res) => {
     try {
@@ -34,6 +35,8 @@ app.get("/login", (req, res) => {
     }
 })
 
+app.use(auth)
+app.use(express.static(frontend))
 
 connection().then(() => {
     app.listen(port, () => {

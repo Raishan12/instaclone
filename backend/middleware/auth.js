@@ -11,7 +11,7 @@ export default async function auth(req,res,next){
     console.log(process.env.JWT_KEY);
     
     if(!key)
-        return res.status(400).send("unauthorized access")
+        return res.status(400).redirect("http://localhost:7000/login")
     const token = key.split(" ")[1]
     
     const auth = await verify(token,process.env.JWT_KEY)
