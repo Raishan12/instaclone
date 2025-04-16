@@ -1,5 +1,9 @@
 console.log("signup's js")
+<<<<<<< HEAD
 localStorage.removeItem("token");
+=======
+
+>>>>>>> f7519cbf6869b7b9bcd2c33781e151a9a4531663
 let profilepicture=""
 document.getElementById("profilepicture").addEventListener("change",async(e)=>{
     console.log(e.target.files)
@@ -24,7 +28,11 @@ function convertBase64(file){
 
 async function signup(event){
     event.preventDefault()
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> f7519cbf6869b7b9bcd2c33781e151a9a4531663
     const pass = document.getElementById("password").value
     const cpass = document.getElementById("confirmpassword").value
 
@@ -39,14 +47,21 @@ async function signup(event){
         phone: document.getElementById("phone").value,
         password: document.getElementById("password").value
     }
+<<<<<<< HEAD
     console.log(content)
     console.log(profilepicture)
+=======
+>>>>>>> f7519cbf6869b7b9bcd2c33781e151a9a4531663
 
     try {
         const res = await fetch("http://localhost:7000/api/insta/signup",{
             method:"post",
             headers:{"Content-Type":"application/json"},
+<<<<<<< HEAD
             body: JSON.stringify(content)
+=======
+            body:JSON.stringify(content)
+>>>>>>> f7519cbf6869b7b9bcd2c33781e151a9a4531663
         })
         const data =await res.json()
         if(res.status===201){

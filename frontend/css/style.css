@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 * {
   margin: 0;
   padding: 0;
@@ -171,3 +172,13 @@ input::placeholder {
   bottom: 35px;
   cursor: pointer;
 } 
+=======
+body {
+    font-family: 'Roboto', sans-serif;
+    background: radial-gradient(circle at top right, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+>>>>>>> f7519cbf6869b7b9bcd2c33781e151a9a4531663

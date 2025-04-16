@@ -4,13 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
+<<<<<<< HEAD
     <link rel="stylesheet" href="/css/signupstyle.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Grand+Hotel&display=swap" rel="stylesheet">
+=======
+    <!-- <link rel="stylesheet" href="/css/signupstyle.css"> -->
+>>>>>>> f7519cbf6869b7b9bcd2c33781e151a9a4531663
     <script src="/js/signup.js" defer></script>
 
 </head>
 <body>
     <form onsubmit="signup(event)">
+<<<<<<< HEAD
         <div class="title">Instagram</div>
         <div id="profilepicturepreview">
             <input type="file" id="profilepicture" name="profilepicture" accept="image/*" hidden>
@@ -35,5 +40,31 @@
         </div>
     </form>
 
+=======
+        <h1>Sign Up</h1>
+        <label for="profilepicture">Profilepicture: </label>
+        <input type="file" name="profilepicture" id="profilepicture" ><br><br>
+        <div id="profilepicturepreview"></div>
+        <label for="username">Username: </label>
+        <input type="text" name="username" id="username" placeholder="Username" required>
+        <br>
+        <label for="email">Email: </label>
+        <input type="text" name="email" id="email" placeholder="Email" required>
+        <br>
+        <label for="phone">Phone: </label>
+        <input type="text" name="phone" id="phone" placeholder="Phone" required>
+        <br>
+        <label for="password">Password: </label>
+        <input type="text" name="password" id="password" placeholder="Password" required>
+        <br>
+        <label for="confirmpassword">Confirm Password: </label>
+        <input type="text" name="confirmpassword" id="confirmpassword" placeholder="Confirm Password" required>
+        <br>
+        <input type="submit" value="SUBMIT">
+    </form>
+    <div class="login">
+        <p>Have an account? <a href="/login">Login</a></p>
+    </div>
+>>>>>>> f7519cbf6869b7b9bcd2c33781e151a9a4531663
 </body>
 </html>

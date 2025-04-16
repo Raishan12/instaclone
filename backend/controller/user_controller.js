@@ -3,11 +3,16 @@ import bcrypt from "bcrypt"
 import jwt from "jsonwebtoken"
 
 export const signup = async (req, res) => {
+<<<<<<< HEAD
         console.log("signup function");
         
         console.log(req.body);
 
         const { profilepicture, username, email, phone, password } = req.body
+=======
+        const { profilepicture, username, email, phone, password } = req.body
+        console.log(req.body);
+>>>>>>> f7519cbf6869b7b9bcd2c33781e151a9a4531663
        console.log("add user in controller");
        if (!(profilepicture && username && email && phone && password)) {
             return res.status(404).send({ error: "please fill all fields" })
@@ -40,7 +45,11 @@ export const login = async (req, res) => {
             return res.status(402).json({message: "Incorrect Password"})
         }
 
+<<<<<<< HEAD
         const token = await jwt.sign({ id: userExist._id }, process.env.JWT_KEY, { expiresIn: "20h" })
+=======
+        const token = await jwt.sign({ id: userExist._id }, process.env.JWT_KEY, { expiresIn: "10s" })
+>>>>>>> f7519cbf6869b7b9bcd2c33781e151a9a4531663
 
         return res.status(200).json({ message: "User successfully Logged",token})
                                                                                                                                                                                         
