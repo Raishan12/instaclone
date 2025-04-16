@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram</title>
+    <link rel="icon" type="image/png" href="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png">
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Grand+Hotel&display=swap" rel="stylesheet">
+    <script src="/js/index.js" defer></script>
+
+</head>
+<body>
+    <div class="navbar">
+        <div class="title">Instagram</div>
+        <div class="profile" id="profileContainer">
+            <img id="profilePic" src="" alt="Profile Picture">
+            <div class="dropdown" id="profileDropdown">
+                <div class="dropdown-item" onclick="goToProfile()">Profile</div>
+                <div class="dropdown-item" id></div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+
+    </div>
+    <div class="background"></div>
+    <div class="uploadpost" id="uploadpost">
+        <form>
+            <label for="photo">Photo: </label>
+            <input type="file" name="photo" id="photo">
+            <div class="postpreview"></div>
+            <input type="text" name="desc" id="desc" placeholder="description">
+            <input type="submit" value="POST">
+        </form>
+    </div>
+    <div class="footer">
+        <p class="postbutton" onclick="uploadPost()">+</p>
+    </div>
+</body>
+</html>
