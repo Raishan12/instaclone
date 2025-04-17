@@ -1,6 +1,5 @@
 console.log("index's js")
 
-<<<<<<< HEAD
 loadData()
 async function loadData() {
     const token = localStorage.getItem("token");
@@ -74,15 +73,3 @@ function checkTokenValidity() {
 function uploadPost(){
     document.getElementById("uploadpost").style.display = "block" ? "none" : "block"
 }
-=======
-async function loadData(){
-    const res = await fetch("http://localhost:5000/api/insta/loaddata", {
-        headers: {"Authorization": `Bearer ${localStorage.getItem('token')}`}
-    })
-    const data = await res.json()
-    console.log(data);
-
-    
-}
-loadData()
->>>>>>> f7519cbf6869b7b9bcd2c33781e151a9a4531663
