@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/profilestyle.css">
+  <script src="/js/profile.js" defer></script>
+</head>
+
+<body>
+  <div class="profile-container">
+
+    <!-- Profile Header -->
+    <div class="profile-header">
+      <img id="profilePicture" src="" alt="Profile Picture" class="profile-picture">
+
+      <div class="profile-info">
+        <div class="username-row">
+          <h2 id="username">username</h2>
+          <button class="edit-btn" onclick="editprofile()">Edit Profile</button>
+          <button class="edit-btn" onclick="deleteprofile()">Delete Account</button>
+        </div>
+
+        <div class="stats-row">
+          <div class="stat"><strong id="postCount">0</strong> <span>posts</span></div>
+          <div class="stat"><strong id="followers">0</strong> <span>followers</span></div>
+          <div class="stat"><strong id="following">0</strong> <span>following</span></div>
+        </div>
+
+        <div class="bio">
+          <p class="bio-name"><strong id="bioName">Name</strong></p>
+          <p class="bio-desc" id="bioDesc">User bio will go here.</p>
+        </div>
+      </div>
+    </div>
+    <!-- Edit Profile Modal -->
+    <div id="editProfileModal" class="edit-modal">
+      <form id="editProfileForm" class="edit-form" onsubmit="submitEditProfile(event)">
+        <div class="title">Edit Profile</div>
+
+        <div id="editProfilePicPreview">
+          <label for="editProfilePic" id="editPreviewLabel">
+            <span>+</span>
+          </label>
+        </div>
+        <input type="file" id="editProfilePic" accept="image/*">
+
+
+        <input type="text" id="editUsername" placeholder="Username">
+        <input type="text" id="editEmail" placeholder="Email">
+        <input type="text" id="editPhone" placeholder="Phone">
+
+        <input type="submit" value="Save Changes">
+        <div class="login">
+          <p><a href="#" onclick="closeEditProfile()">Cancel</a></p>
+        </div>
+      </form>
+    </div>
+
+
+    <div class="posts-grid" id="postsGrid">
+    </div>
+    <div class="bigimage" id="bigimage">
+
+    </div>
+  </div>
+</body>
+
+</html>

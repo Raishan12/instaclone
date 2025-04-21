@@ -17,6 +17,7 @@ async function signin(event){
 
         if(res.status===200){
             localStorage.setItem("token",data.token)
+            localStorage.setItem("user_id",data.user_id)
             alert(data.message)
             window.location.href = "/"
         }else{

@@ -38,6 +38,38 @@ app.get("/login", (req, res) => {
     }
 })
 
+app.get("/profile", (req, res) => {
+    try {
+        res.status(200).sendFile(path.join(frontend, "profile.html"))
+    } catch (error) {
+        res.status(404).send("Page not found")
+    }
+})
+
+app.get("/forgot", (req, res) => {
+    try {
+        res.status(200).sendFile(path.join(frontend, "forgot.html"))
+    } catch (error) {
+        res.status(404).send("Page not found")
+    }
+})
+
+app.get("/verifyotp", (req, res) => {
+    try {
+        res.status(200).sendFile(path.join(frontend, "otp.html"))
+    } catch (error) {
+        res.status(404).send("Page not found")
+    }
+})
+
+app.get("/resetpassword", (req, res) => {
+    try {
+        res.status(200).sendFile(path.join(frontend, "resetpassword.html"))
+    } catch (error) {
+        res.status(404).send("Page not found")
+    }
+})
+
 
 connection().then(() => {
     app.listen(port, () => {

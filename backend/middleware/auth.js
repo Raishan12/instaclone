@@ -4,6 +4,7 @@ const { verify } = pkg
 
 export default async function auth(req, res, next) {
     console.log("auth middleware")
+    console.log(req.headers.authorization)
     const key = req.headers.authorization
 
     if (!key)
@@ -15,10 +16,13 @@ export default async function auth(req, res, next) {
         const user = await userSchema.findById(decoded.id)
 
         if (!user) {
-            return res.status(401).send("User not found")
+        console.log("useer not found");
+        return res.status(401).send("User not found")
         }
 
         req.user = user
+        console.log("auth success");
+        
         next();
     } catch (error) {
         return res.status(401).send("Invalid token")

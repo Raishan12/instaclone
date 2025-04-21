@@ -24,20 +24,55 @@ function convertBase64(file){
 
 async function signup(event){
     event.preventDefault()
-    
-    const pass = document.getElementById("password").value
-    const cpass = document.getElementById("confirmpassword").value
 
-    if(pass!==cpass){
-        return alert("Password Missmatch")
+
+    const username = document.getElementById("username").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const password = document.getElementById("password").value;
+    const confirmPassword = document.getElementById("confirmpassword").value;
+
+    const usernameRegex = /^[a-z0-9._]+$/;
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    const phoneRegex = /^[6-9]\d{9}$/;
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,12}$/;
+
+    if (!username || !email || !phone || !password || !confirmPassword) {
+        alert("Fill all fields")
+        return true
+    }
+
+    if (!usernameRegex.test(username)) {
+        alert("Username must contain only lowercase letters, numbers, '.', or '_'")
+        return true
+    }
+
+    if (!emailRegex.test(email)) {
+        alert("Please enter a valid email address.")
+        return true
+    }
+
+    if (!phoneRegex.test(phone)) {
+        alert("Please enter a valid 10-digit Indian phone number (starting with 6-9).")
+        return true
+    }
+
+    if (!passwordRegex.test(password)) {
+        alert("Password must be 8-12 characters long and include at least 1 uppercase, 1 lowercase, 1 number, and 1 special character.")
+        return true
+    }
+
+    if (password !== confirmPassword) {
+        alert("Passwords do not match.")
+        return true
     }
 
     const content = {
         profilepicture: profilepicture,
-        username: document.getElementById("username").value,
-        email: document.getElementById("email").value,
-        phone: document.getElementById("phone").value,
-        password: document.getElementById("password").value
+        username: username,
+        email: email,
+        phone: phone,
+        password: password
     }
     console.log(content)
     console.log(profilepicture)
