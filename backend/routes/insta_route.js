@@ -19,4 +19,5 @@ instaRoutes.post("/update/:id", update)
 instaRoutes.get("/delete/:id", deleteacc)
 
 
+
 export default instaRoutes

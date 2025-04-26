@@ -1,22 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Instagram</title>
     <link rel="icon" type="image/png" href="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png">
     <link rel="stylesheet" href="/css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Grand+Hotel&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Grand+Hotel&display=swap"
+        rel="stylesheet">
+    <!-- Add Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- Add Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
     <script src="/js/index.js" defer></script>
 
 </head>
+
 <body>
     <div class="navbar">
         <div class="title">Instagram</div>
         <div class="profile" id="profileContainer">
             <img id="profilePic" src="" alt="Profile Picture">
             <div class="dropdown" id="profileDropdown">
-                <a href="/profile"><div class="dropdown-item">Profile</div></a>
+                <a href="/profile">
+                    <div class="dropdown-item">Profile</div>
+                </a>
                 <div class="dropdown-item" id="logout">Logout</div>
             </div>
         </div>
@@ -26,10 +37,10 @@
     </div>
     <div class="background"></div>
     <div class="uploadpost" id="uploadpost">
-        <form onsubmit="uploadpost()">
+        <form onsubmit="uploadpost(event)">
             <label for="photo">Photo: </label>
             <div class="photopreview" id="photopreview"></div>
-            <input type="file" name="photo" id="photo">
+            <input type="file" name="photo" id="photo" multiple>
             <input type="text" name="desc" id="desc" placeholder="description">
             <input type="submit" value="POST" class="edit-btn">
         </form>
@@ -38,4 +49,5 @@
         <p class="postbutton" onclick="uploadPostSection()">+</p>
     </div>
 </body>
+
 </html>

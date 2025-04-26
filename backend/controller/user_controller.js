@@ -87,9 +87,6 @@ export const upload = async (req, res) => {
     console.log(req.body);
     const { user_id } = req.params
     const { post, description } = req.body
-    console.log(req.body)
-    console.log({ post, description, user_id })
-
     try {
         if (!(post && description && user_id)) {
             return res.status(404).send({ error: "please fill all fields" })

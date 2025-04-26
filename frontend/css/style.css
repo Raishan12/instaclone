@@ -44,7 +44,6 @@ body {
   object-fit: cover;
   border-radius: 50%;
   border: 1px solid #333;
-  /* transition: border 0.3s ease; */
 }
 
 .dropdown {
@@ -87,10 +86,8 @@ a {
   flex-direction: column;
   gap: 20px;
   align-items: center;
-  margin-bottom: 15%;
 }
 
-/* Post container styling */
 .post {
   background-color: #1c1c1c;
   border: 1px solid #333;
@@ -102,7 +99,6 @@ a {
   margin-bottom: 20px;
 }
 
-/* Post header with profile image and username */
 .post-header {
   display: flex;
   align-items: center;
@@ -123,8 +119,8 @@ a {
   font-size: 14px;
 }
 
-/* Post image */
 .post-image {
+  background-color: #333;
   margin-top: 10px;
   height: 400px;
   overflow: hidden;
@@ -137,28 +133,20 @@ a {
   object-fit: contain;
 }
 
-/* Post actions like, comment, share */
-.post-actions {
+.post-like-comment {
+  margin: 5px 0 0 5px;
   display: flex;
-  gap: 12px;
-  font-size: 20px;
-  margin-top: 10px;
+  gap: 25px;
+}
+
+.post-like-comment img {
+  width: 25px;
+}
+
+.post-like-comment div {
   cursor: pointer;
 }
 
-.post-actions span:hover {
-  opacity: 0.8;
-  transition: opacity 0.2s ease;
-}
-
-/* Likes count */
-.post-likes {
-  margin-top: 10px;
-  font-weight: 600;
-  font-size: 14px;
-}
-
-/* Description */
 .post-description {
   margin-top: 8px;
   font-size: 14px;
@@ -166,39 +154,31 @@ a {
 }
 
 .post-description .post-username {
+  /* font-weight: bold; */
+  margin-right: 5px;
+}
+
+.post-username {
   font-weight: bold;
-  margin-right: 5px;
 }
 
-/* Comments section */
-.post-comments {
-  margin-top: 10px;
-  font-size: 13px;
-}
-
-.view-comments {
-  color: #aaa;
-  cursor: pointer;
-  display: block;
-  margin-bottom: 4px;
-}
-
-.comment {
-  margin-top: 3px;
-}
-
-.comment b {
-  margin-right: 5px;
-  color: #fff;
-}
-
-/* Post timestamp */
 .post-date {
   font-size: 11px;
   color: #666;
   margin-top: 8px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+}
+
+.swiper {
+  width: 100%;
+  height: 400px;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 
@@ -275,7 +255,7 @@ input::placeholder {
   background-color: #121212;
   padding: 10px 20px;
   border-top: 1px solid #262626;
-  position: fixed;
+  position: sticky;
   bottom: 0;
   width: 100%;
   height: 61px;
@@ -292,6 +272,6 @@ input::placeholder {
   text-align: center;
   font-size: 40px;
   position: fixed;
-  bottom: 35px;
+  bottom: 5px;
   cursor: pointer;
 } 

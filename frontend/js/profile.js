@@ -18,8 +18,7 @@ async function loadProfilePage() {
             const user = userData.user;
 
             document.getElementById("username").textContent = user.username;
-            document.getElementById("profilePicture").src = user.profilepicture;
-            document.getElementById("bioName").textContent = user.username;
+            document.getElementById("profilePicture").src = user.profilepicture;    
             document.getElementById("bioDesc").textContent = `Hey there! This is ${user.username}'s profile.`;
 
         } else {

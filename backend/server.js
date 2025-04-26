@@ -17,7 +17,7 @@ const frontend = path.join(__dirname, "..", "frontend")
 
 
 
-app.use(express.json({limit:"15mb"}))
+app.use(express.json({limit:"100mb"}))
 
 app.use("/api/insta", userRoutes)
 app.use(express.static(frontend))
